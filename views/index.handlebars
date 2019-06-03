@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Login Page </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+</head>
+<body>
+<a id="link1" href="/profile">Click here to go to profile page</a>
+<a id="link2" href="/logout">Click here to go to logout page</a>
+    <!-- Nav Bar using Bootstap -->
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
+
+        <ul class="nav justify-content-end">
+        </ul>
+    </nav>
+
+ <!-- FORM FOR LOGIN -->
+    <div class="container">
+        <form action = "http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method = "post" id="insertSurvey">
+            <div class="mx-auto">
+                <h2 style="text-align: center">Login</h2>
+            </div>
+            <label for="username"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username Here" name = "username"
+              id="username" required>
+            <label for="password"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password Here" name = "password" id="password" required>
+            <button class="btn btn-primary" onclick="getInfo();" >Submit</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me?
+            </label>
+            <div class="container">
+                <button type="button" class="btn btn-danger">Cancel</button>
+                <span class="psw">Forgot <a href="assets/pages/Forgot.html">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!-- Personal JavaScript -->
+     <script src="assets/js/script.js"></script>
+    </body>
+</html>

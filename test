@@ -1,0 +1,8 @@
+<h1 id="logout" style="margin-top: 3em">
+You've Been Logged Out
+</h1>
+
+<script>
+document.getElementById("logout").style.color = "red";
+document.getElementById("logout").style.textAlign= "center";
+</script>

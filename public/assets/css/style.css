@@ -1,0 +1,35 @@
+body{
+    font-family: 'Varela Round', sans-serif;
+    width: 960px;
+    margin: 0 auto;
+    background: url(../images/trash.png) no-repeat top center;
+}
+
+#content{
+    overflow: auto;
+    height: 100%;
+}
+
+form{
+    margin-top: 10px;
+}
+
+
+form#insertSurvey {
+            border: 5px;
+            border-style: solid;
+            border-color: black;
+            padding: 10px;
+            background-color: white;
+            opacity: 0.9;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+    padding-top: 25px;
+}
