@@ -6,8 +6,6 @@
 	<title>Profile</title>
 </head>
 <body>
-<a id="link1" href="/logout">Click here to go to logout page</a>
-<a id="link2" href="/index">Click here to go to login page</a>
 	<h1 class="container text-center mb-4">Profile</h1>
 
 	<div class="container">
@@ -17,6 +15,7 @@
 			</div>
 			<div class="col-md text-center border">
 				<h1>Bio</h1>
+
 				<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -27,10 +26,11 @@
 		</div>
 		<div class="row">
 			<div class="col-md border text-center">
-				<h1>John Smith</h1>
+				<h1 class="update">John Smith</h1>
 			</div>
 			<div class="col-md border text-center">
-				<h1>Points: 44</h1>
+				<h1>Points: 
+					<span>44</span></h1>
 			</div>
 		</div>
 		<div class="row">
@@ -44,26 +44,6 @@
 <script type="text/javascript">
     // variabel global marker
     var marker;
-    /*
-    function placeMarker(map, position) {
-        if (marker) {
-
-            marker.setPosition(position);
-        } else {
-
-            marker = new google.maps.Marker({
-                position: position,
-                map: map,
-            });
-        }
-        marker.setAnimation(google.maps.Animation.BOUNCE);
-        setTimeout(function() {
-            marker.setAnimation(null);
-        }, 750);
-        $("input[name=lng]").val(position.lat());
-        $("input[name=lat]").val(position.lng());
-        console.log($("input[name=lng]").val() + "," + $("input[name=lat]").val());
-    }*/
     function initialize() {
         var mapProps = {
             center: new google.maps.LatLng(41,-108.3),
@@ -111,23 +91,37 @@
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
         <div id="google-maps" style="height: 400px; width:100%"></div>
-
-		</div>
+    </div>
+    <br>
 		<div class="row">
 			<div class="col-md border text-center">
-				<h1>Activity Feed</h1>
+				<button onclick="update()">EDIT PROFILE</button>
+			</div>			
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md border text-center">
+				<h1><a href="/index">Activity Feed</a></h1>
 			</div>
 			<div class="col-md border text-center">
-				<h1>Map</h1>
+				<h1><a href="/map">Activity Feed</a></h1>
 			</div>
 			<div class="col-md border text-center">
-				<h1><b>Profile</b></h1>
+				<h1><b><a href="/profile">Profile</a></b></h1>
 			</div>
 
 		</div>
 	</div>
 
 
+<script type="text/javascript">
+	function update(){
+		var elements = document.getElementsByClassName("update");
+		elements.forEach( function(element, index) {
+			element.contentEditable = 'true';
+		});
+	}
+</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
